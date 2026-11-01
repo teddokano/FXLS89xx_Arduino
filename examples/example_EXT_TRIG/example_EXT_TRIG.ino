@@ -15,6 +15,10 @@
  * Definition for test functions
  */
 
+#if defined(TARGET_C444) || defined(TARGET_N236)
+#error "EXT_TRIG needs the INT2 pin, which the on-board sensor of FRDM-MCXC444/MCXN236 does not bring out. Use a FXLS89xx shield on the Arduino header."
+#endif
+
 FXLS89xx fxls89xx;
 
 /*
